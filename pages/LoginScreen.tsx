@@ -50,7 +50,7 @@ const LoginScreen = () => {
       <Text style={styles.orText}>Or Log In with</Text>
       <View style={styles.socialContainer}>
         <TouchableOpacity style={styles.socialButton}>
-          <Image source={require('./assets/google.png')} style={styles.socialIcon} />
+          <Image source={require('./assets/icons/google.png')} style={styles.socialIcon} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.socialButton}>
           <Image source={require('./assets/infbxclear.png')} style={styles.socialIcon} />
