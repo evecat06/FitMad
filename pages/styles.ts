@@ -29,6 +29,15 @@ const CommonStyles = StyleSheet.create({
     marginLeft: 15,
     marginBottom: 10,
   },
+  lstitle: {
+    fontSize: 36,
+    fontWeight: 'bold',
+    fontFamily: 'serif',
+    color: '#fff',
+    textAlign: 'left',
+    marginLeft: 15,
+    marginBottom: 10,
+  },
   subtitle: {
     textAlign: 'right',
     color: '#fff',
@@ -84,6 +93,19 @@ const CommonStyles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#000',
   },
+  LoadScButton: {
+    height: 50,
+    backgroundColor: '#f5f5f5',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 5,
+    marginVertical: 10,
+  },
+  LoadScButText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#000',
+  },
   signupButton: {
     height: 50,
     backgroundColor: '#f5f5f5',
@@ -121,6 +143,14 @@ const CommonStyles = StyleSheet.create({
   socialIcon: {
     width: 30,
     height: 30,
+  },
+  LogoContainer: {
+    alignItems: 'center',
+  },
+  LogoIcon: {
+    width: 200,
+    height: 200,
+    alignSelf: 'center',
   },
   row: {
     flexDirection: 'row',
