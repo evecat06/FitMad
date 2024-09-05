@@ -13,8 +13,13 @@ const CommonStyles = StyleSheet.create({
     left: 0,
     right: 0,
     top: 0,
-    height: '100%',
+    height: '120%',
+    zIndex: -1, 
   },
+  content: {
+    padding: 20,
+    zIndex: 1,  // Bring content in front of the background
+  },  
   title: {
     fontSize: 36,
     fontWeight: 'bold',
@@ -31,7 +36,7 @@ const CommonStyles = StyleSheet.create({
     fontStyle: 'italic',
     marginRight: 25,
   },
-  signUpText: {
+  highlightedText: {
     color: '#0EBFFF',
     textDecorationLine: 'underline',
   },
@@ -51,9 +56,9 @@ const CommonStyles = StyleSheet.create({
   halfInput: {
     width: '48%',
     height: 50,
-    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    backgroundColor: 'transparent',
     color: '#fff',
-    paddingHorizontal: 10,
+    paddingHorizontal: 5,
     borderRadius: 5,
     marginVertical: 10,
     fontSize: 16,
@@ -66,7 +71,7 @@ const CommonStyles = StyleSheet.create({
     textDecorationLine: 'underline',
     marginVertical: 5,
   },
-  loginButton: {
+  Button: {
     height: 50,
     backgroundColor: '#f5f5f5',
     justifyContent: 'center',
@@ -74,7 +79,7 @@ const CommonStyles = StyleSheet.create({
     borderRadius: 5,
     marginVertical: 20,
   },
-  loginButtonText: {
+  ButtonText: {
     fontSize: 18,
     fontWeight: 'bold',
     color: '#000',
@@ -116,6 +121,16 @@ const CommonStyles = StyleSheet.create({
   socialIcon: {
     width: 30,
     height: 30,
+  },
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginVertical: 2,
+  },  
+  scrollContainer: {
+    padding: 20,
+    flexGrow: 1,  
+    justifyContent: 'center',  
   },
 });
 

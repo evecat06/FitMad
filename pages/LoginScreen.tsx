@@ -21,7 +21,7 @@ const LoginScreen = () => {
       <Text style={CommonStyles.title}>Log In</Text>
       <Text style={CommonStyles.subtitle}>
         Don’t have an account?   {''}
-        <TouchableOpacity><Text style={CommonStyles.signUpText}>
+        <TouchableOpacity><Text style={CommonStyles.highlightedText}>
           Sign Up
       </Text></TouchableOpacity>
       </Text>
@@ -47,8 +47,8 @@ const LoginScreen = () => {
         <Text style={CommonStyles.forgotPasswordText}>forgot password?</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={CommonStyles.loginButton} onPress={handleLogin}>
-        <Text style={CommonStyles.loginButtonText}>Log In</Text>
+      <TouchableOpacity style={CommonStyles.Button} onPress={handleLogin}>
+        <Text style={CommonStyles.ButtonText}>Log In</Text>
       </TouchableOpacity>
 
       <Text>{' '}</Text>
