@@ -1,0 +1,122 @@
+import { StyleSheet } from 'react-native';
+import {LinearGradient} from 'expo-linear-gradient';
+
+const CommonStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    padding: 20,
+    backgroundColor: '#000',
+  },
+  background: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    height: '100%',
+  },
+  title: {
+    fontSize: 36,
+    fontWeight: 'bold',
+    fontFamily: 'serif',
+    color: '#fff',
+    textAlign: 'left',
+    marginLeft: 15,
+    marginBottom: 10,
+  },
+  subtitle: {
+    textAlign: 'right',
+    color: '#fff',
+    marginBottom: 20,
+    fontStyle: 'italic',
+    marginRight: 25,
+  },
+  signUpText: {
+    color: '#0EBFFF',
+    textDecorationLine: 'underline',
+  },
+  input: {
+    width: '100%',
+    height: 50,
+    backgroundColor: 'transparent',
+    borderColor: '#A31018',
+    borderWidth: 1,
+    color: '#fff',
+    paddingHorizontal: 10,
+    borderRadius: 5,
+    marginVertical: 10,
+    fontSize: 16,
+    textAlign: 'center',
+  },
+  halfInput: {
+    width: '48%',
+    height: 50,
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    color: '#fff',
+    paddingHorizontal: 10,
+    borderRadius: 5,
+    marginVertical: 10,
+    fontSize: 16,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  forgotPasswordText: {
+    color: '#0EBFFF',
+    textAlign: 'right',
+    textDecorationLine: 'underline',
+    marginVertical: 5,
+  },
+  loginButton: {
+    height: 50,
+    backgroundColor: '#f5f5f5',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 5,
+    marginVertical: 20,
+  },
+  loginButtonText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#000',
+  },
+  signupButton: {
+    height: 50,
+    backgroundColor: '#f5f5f5',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 5,
+    marginVertical: 20,
+  },
+  signupButtonText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#000',
+    marginVertical: 5,
+  },
+  orText: {
+    textAlign: 'center',
+    color: '#fff',
+    marginVertical: 10,
+    fontStyle: 'italic',
+  },
+  socialContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop: 10,
+  },
+  socialButton: {
+    width: 50,
+    height: 50,
+    backgroundColor: '#2C2C2C',
+    borderRadius: 25,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginHorizontal: 10,
+  },
+  socialIcon: {
+    width: 30,
+    height: 30,
+  },
+});
+
+export default CommonStyles;
