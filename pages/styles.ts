@@ -7,6 +7,7 @@ const CommonStyles = StyleSheet.create({
     justifyContent: 'center',
     padding: 20,
     backgroundColor: '#000',
+
   },
   background: {
     position: 'absolute',
@@ -144,11 +145,16 @@ const CommonStyles = StyleSheet.create({
     width: 30,
     height: 30,
   },
+  imageWrapper: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',  // Makes sure the wrapper spans full width
+  },
   LogoContainer: {
     alignItems: 'center',
   },
   LogoIcon: {
-    width: 250,
+    width: 200,
     height: 200,
     alignContent: 'center',
     alignSelf: 'center',

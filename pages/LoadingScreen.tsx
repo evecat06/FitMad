@@ -28,8 +28,10 @@ const LoadingScreen: React.FC<Props> = ({ navigation }) => {
 
   return (
     <View style={CommonStyles.container}>
-      <LinearGradient colors={['#000000', '#a31018']} style={CommonStyles.background} />
-      <Image source={require('../assets/icons/fitmadwhite.png')} style={CommonStyles.LogoIcon} />
+      <LinearGradient colors={['#000000', '#a31018']} style={CommonStyles.background} /> 
+      <View style={CommonStyles.imageWrapper}>
+      <Image source={require('../assets/icons/fitmadwhite.png')} style={[CommonStyles.LogoIcon, { marginBottom: 20 }]} />
+      </View>
 
       <TouchableOpacity style={CommonStyles.LoadScButton} onPress={handleLogin}>
         <Text style={CommonStyles.LoadScButText}>Log In</Text>

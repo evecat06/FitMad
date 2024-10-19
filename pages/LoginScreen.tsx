@@ -36,7 +36,7 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
       <Text style={CommonStyles.subtitle}>
         Don’t have an account?   
         <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen')}>
-          <Text style={CommonStyles.highlightedText}> Sign Up</Text>
+          <Text style={[CommonStyles.highlightedText, { marginBottom: 30 }]}> Sign Up</Text>
         </TouchableOpacity>
       </Text>
 
@@ -48,7 +48,7 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
         onChangeText={setUsername}
       />
       <TextInput
-        style={CommonStyles.input}
+        style={[CommonStyles.input, { marginBottom: 20 }]}
         placeholder="Password"
         placeholderTextColor="#fff"
         secureTextEntry
