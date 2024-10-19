@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, ScrollView } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, TextInput, TouchableOpacity, Image, ScrollView } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { useNavigation } from '@react-navigation/native';
+import { StackScreenProps } from '@react-navigation/stack';
+import { RootStackParamList } from '../App';
 import CommonStyles from '../pages/styles';
 
-const SignUpScreen = () => {
+// Define props using StackScreenProps for navigation
+type Props = StackScreenProps<RootStackParamList, 'SignUpScreen'>;
+
+const SignupScreen: React.FC<Props> = ({ navigation }) => {
   const [firstName, setFirstName] = useState<string>('');
   const [lastName, setLastName] = useState<string>('');
   const [username, setUsername] = useState<string>('');
@@ -14,28 +18,22 @@ const SignUpScreen = () => {
   const [password, setPassword] = useState<string>('');
   const [confirmPassword, setConfirmPassword] = useState<string>('');
 
-  const navigation = useNavigation();  // Add navigation
-
   const handleSignUp = () => {
-    console.log('Signing Up...');
+    navigation.navigate('LoginScreen');
   };
 
   return (
     <ScrollView contentContainerStyle={CommonStyles.scrollContainer}>
       <LinearGradient colors={['#000000', '#a31018']} style={CommonStyles.background} />
-      <Text>{' '}</Text>
-      <Text>{' '}</Text>
-      <Text>{' '}</Text>
-      <Text>{' '}</Text>
-      <Text>{' '}</Text>
       <Text style={CommonStyles.title}>Sign Up</Text>
       <Text style={CommonStyles.subtitle}>
         Already have an account?{' '}
-        <TouchableOpacity><Text style={CommonStyles.highlightedText}>
-          Log In
-        </Text></TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')}>
+          <Text style={CommonStyles.highlightedText}>Log In</Text>
+        </TouchableOpacity>
       </Text>
 
+      {/* First Name and Last Name Input */}
       <View style={CommonStyles.row}>
         <TextInput
           style={[CommonStyles.input, CommonStyles.halfInput]}
@@ -53,6 +51,7 @@ const SignUpScreen = () => {
         />
       </View>
 
+      {/* Username and Contact No. Input */}
       <View style={CommonStyles.row}>
         <TextInput
           style={[CommonStyles.input, CommonStyles.halfInput]}
@@ -88,7 +87,7 @@ const SignUpScreen = () => {
         style={CommonStyles.input}
         placeholder="Password"
         placeholderTextColor="#fff"
-        secureTextEntry={true}
+        secureTextEntry
         value={password}
         onChangeText={setPassword}
       />
@@ -96,7 +95,7 @@ const SignUpScreen = () => {
         style={CommonStyles.input}
         placeholder="Confirm Password"
         placeholderTextColor="#fff"
-        secureTextEntry={true}
+        secureTextEntry
         value={confirmPassword}
         onChangeText={setConfirmPassword}
       />
@@ -105,7 +104,6 @@ const SignUpScreen = () => {
         <Text style={CommonStyles.ButtonText}>Sign Up</Text>
       </TouchableOpacity>
 
-      <Text>{' '}</Text>
       <Text style={CommonStyles.orText}>Or Sign Up with</Text>
       <View style={CommonStyles.socialContainer}>
         <TouchableOpacity style={CommonStyles.socialButton}>
@@ -119,4 +117,4 @@ const SignUpScreen = () => {
   );
 };
 
-export default SignUpScreen;
+export default SignupScreen;

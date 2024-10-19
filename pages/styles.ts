@@ -148,8 +148,9 @@ const CommonStyles = StyleSheet.create({
     alignItems: 'center',
   },
   LogoIcon: {
-    width: 200,
+    width: 250,
     height: 200,
+    alignContent: 'center',
     alignSelf: 'center',
   },
   row: {
